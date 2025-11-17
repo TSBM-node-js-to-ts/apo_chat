@@ -31,7 +31,7 @@ Then('채팅방 생성이 완료된다', function() {
 })
 
 Then('예외 응답이 발생한다', function() {
-  if (response.statusCode !== 500) {
+  if (response.statusCode !== 400) {
     throw new Error(`Expected status code 500, but got ${response.statusCode}`);
   }
 })
