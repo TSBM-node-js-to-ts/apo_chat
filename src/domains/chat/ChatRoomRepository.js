@@ -1,11 +1,12 @@
 import { ChatRoomEntity } from "../../infrastructures/database/models/chatRoom.entity.js";
 import { ChatRoom } from "./ChatRoom.js";
+import {NotFoundError} from "../../errors/NotFoundError.js";
 
 export class ChatRoomRepository {
     async getById(id) {
         const entity = await ChatRoomEntity.findByPk(id);
         if (!entity) {
-            throw new Error(`ChatRoom with id ${id} not found`);
+            throw new NotFoundError(`ChatRoom with id ${id} not found`);
         }
         return this._toDomain(entity);
     }

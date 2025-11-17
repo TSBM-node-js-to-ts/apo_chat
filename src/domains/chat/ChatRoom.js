@@ -1,5 +1,5 @@
 export class ChatRoom {
-    constructor({ id, createdBy }) {
+    constructor({ id = null, createdBy }) {
         this.id = id;
         this.createdBy = createdBy;
     }

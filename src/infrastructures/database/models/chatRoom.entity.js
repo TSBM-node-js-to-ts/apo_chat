@@ -5,7 +5,7 @@ export class ChatRoomEntity extends Model {}
 
 ChatRoomEntity.init(
     {
-        id: { type: DataTypes.LONG, autoIncrement: true, primaryKey: true },
+        id: { type: DataTypes.BIGINT, autoIncrement: true, primaryKey: true },
         createdBy: { type: DataTypes.STRING(100), allowNull: false },
     },
     {
