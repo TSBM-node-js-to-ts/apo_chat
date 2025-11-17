@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node src/server.js",
+    "dev": "docker-compose up -d && sleep 3 && nodemon src/server.js",
+    "stop": "docker-compose down",
     "test:acceptance": "cucumber-js --config cucumber.mjs"
   },
   "repository": {
