@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/TSBM-node-js-to-ts/apo_chat#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mysql2": "^3.15.3",
+    "sequelize": "^6.37.7"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^12.2.0",
